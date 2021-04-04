@@ -13,6 +13,7 @@ import Email from "./components/Email";
 import UpdateName from "./pages/UpdateName";
 
 function App() {
+  const [title, updateTitle] = useState(null);
   const [errorMessage, updateErrorMessage] = useState(null);
   return (
     <Router>
@@ -20,13 +21,22 @@ function App() {
         <div className="container d-flex align-items-center flex-column">
           <Switch>
             <Route path="/" exact={true}>
-              <RegistrationForm showError={updateErrorMessage} />
+              <RegistrationForm
+                showError={updateErrorMessage}
+                updateTitle={updateTitle}
+              />
             </Route>
             <Route path="/register">
-              <RegistrationForm showError={updateErrorMessage} />
+              <RegistrationForm
+                showError={updateErrorMessage}
+                updateTitle={updateTitle}
+              />
             </Route>
             <Route path="/login">
-              <LoginForm showError={updateErrorMessage} />
+              <LoginForm
+                showError={updateErrorMessage}
+                updateTitle={updateTitle}
+              />
             </Route>
             <Route path="/navbar">
               <Navbar updateTitle="" />
