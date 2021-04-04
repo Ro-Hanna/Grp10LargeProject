@@ -4,6 +4,9 @@ import * as FaIcons from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
 
+function clickMe() {
+  alert("You Clicked me");
+}
 function Navbar() {
   return (
     <>
@@ -13,6 +16,7 @@ function Navbar() {
       <nav className="nav-menu active">
         <ul className="nav-menu-items">
           <li className="navbar-toggle">
+            <h1>Settings</h1>
             <Link to="#" className="menu-bars" />
           </li>
           {SidebarData.map((item, index) => {
@@ -25,6 +29,10 @@ function Navbar() {
               </li>
             );
           })}
+          <button className="button" onClick={clickMe}>
+            Back to Home
+            <Link to="#"></Link>
+          </button>
         </ul>
       </nav>
     </>

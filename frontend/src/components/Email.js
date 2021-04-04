@@ -26,17 +26,19 @@ function Email({ Email }) {
             <div className="form-inner">
               <h2>Update Email</h2>
               <div class="form-group">
-                <label htmlFor="name">New Email</label>
-                <input type="text" name="name" id="name" />
+                <label htmlFor="newEmail">New Email</label>
+                <input type="text" name="newEmail" id="newEmail" />
               </div>
-
+              <div class="form-group">
+                <label htmlFor="oldEmail">Old Email</label>
+                <input type="text" name="oldEmail" id="oldEmail" />
+              </div>
+              <h3>To verify your identity, please enter your password</h3>
               <div class="form-group">
                 <label htmlFor="password">Password</label>
                 <input type="password" name="password" id="password" />
               </div>
-              <input type="submit" value="Sign-In" />
-
-              <h3>Not a member? Register here</h3>
+              <input type="submit" value="Save Changes" />
             </div>
           </form>
         </div>
